@@ -30,7 +30,7 @@ NBP_aggregate_p_values = function(p_val, by, type="fischer", evidence.limit=6.33
   stopifnot(nrow(by)==nrow(p_val))
 
   if (type=="fischer") {
-    agg = aggregate(p_val, by = by, FUN=NBP_aggregate_fischer, evidence.limit=evidence.limit)
+    agg = stats::aggregate(p_val, by = by, FUN=NBP_aggregate_fischer, evidence.limit=evidence.limit)
     attr(agg, "evidence.limit") = evidence.limit
     return(agg)
   }

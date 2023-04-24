@@ -72,16 +72,16 @@ NBP_classify = function(train_cov, train_class, predict_cov, keep=FALSE,
       xtrain = train_cov[train_class==classes[c], j]
 
       ## Fit Gaussian
-      mu = median(xtrain, na.rm=T)
-      sigma = sd(xtrain, na.rm=T)
+      mu = stats::median(xtrain, na.rm=T)
+      sigma = stats::sd(xtrain, na.rm=T)
 
       ## Compute p value
-      a = pnorm(predict_cov[, j], mean = mu, sd = sigma, log = F)
+      a = stats::pnorm(predict_cov[, j], mean = mu, sd = sigma, log = F)
       pval = 1-2*abs(a-0.5)
       ptab[, j] = pval
 
       ## Compute log densities
-      ldens[, j] = dnorm(predict_cov[, j], mean = mu, sd = sigma, log = T)
+      ldens[, j] = stats::dnorm(predict_cov[, j], mean = mu, sd = sigma, log = T)
 
       ## If (keep==true): store a library of density functions for plotting.
       ## Later: Also store parameters?
@@ -91,19 +91,19 @@ NBP_classify = function(train_cov, train_class, predict_cov, keep=FALSE,
         flist[[c]][[j]] = function(x) {
           mu = mu
           sigma = sigma
-          y = dnorm(x, mu, sigma)
+          y = stats::dnorm(x, mu, sigma)
         }
       }
     } # end for j
 
     ## Make a long format
-    ptab2 = stack(ptab)
+    ptab2 = utils::stack(ptab)
     ## Restructure and rename
     ptab2$ind = as.character(ptab2$ind)
     names(ptab2) = c("p_val", "covariate")
     ptab2 = ptab2[ , c(2,1)]
 
-    ldens2 = stack(ldens)
+    ldens2 = utils::stack(ldens)
 
     ## Add a column with the class
     ## Add identifiers
