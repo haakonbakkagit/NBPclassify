@@ -1,4 +1,4 @@
-Package: NBP
+Package: NBPclassify
 Type: Package
 Title: Classification with the NBP model
 Version: 0.1.0
@@ -17,3 +17,5 @@ RoxygenNote: 7.2.3
 Imports: 
     stats,
     utils
+Depends: 
+    R (>= 2.10)

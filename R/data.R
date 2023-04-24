@@ -34,11 +34,14 @@
 #' @source Data extracted and anonymised from a project funded by
 #' a private-public partnership between Sporbarhet AS and the Norwegian Veterinary
 #' Institute.
-#' @name Fish_scale_elements
+#' @name Fish_scale_elements_fvf
+#' @examples
+#' data("Fish_scale_elements_fvf")
+#' data("Fish_scale_elements_svf")
+#'
 
 #' @rdname Fish_scale_elements_fvf
 "Fish_scale_elements_fvf"
 
 #' @rdname Fish_scale_elements_fvf
 "Fish_scale_elements_svf"
-
