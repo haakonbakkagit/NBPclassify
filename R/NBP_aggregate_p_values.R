@@ -10,7 +10,7 @@
 #' @param type Type of aggregation.
 #' @param evidence.limit See documentation of NBP_aggregate_fischer
 #'
-#' @return
+#' @return A single p-value
 #' @export
 #'
 #' @examples
