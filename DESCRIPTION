@@ -12,6 +12,7 @@ Description: A classifier for multi-class model in high stakes classification
     probability densities.
 License: MIT + file LICENSE
 Encoding: UTF-8
+LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
 Imports: 
