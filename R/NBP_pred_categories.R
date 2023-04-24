@@ -19,7 +19,7 @@
 #' @export
 #'
 #' @examples
-#' NBP_pred_categories(c(0.1, 1E-10, 0, 1))
+#' NBP_pred_categories(data.frame(x=c(0.1, 1E-10, 0, 1)))
 #'
 NBP_pred_categories = function(dat, type="Avoid_0pred_V1", cutoff=0, do_checks=FALSE) {
   ## Want a dataframe with some numerical columns
