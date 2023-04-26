@@ -23,4 +23,6 @@ devtools::install_github("haakonbakkagit/NBPclassify")
 
 ## Examples / Tutorials
 
-See tutorials at \[TODO: Add within 2 days of creating the R package\]
+See code examples / tutorials at
+<https://haakonbakkagit.github.io/btopic136.html> and at
+<https://haakonbakkagit.github.io/btopic137.html>
